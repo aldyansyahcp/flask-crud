@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tambah database</title>
+</head>
+<body>
+	<h2>Tambah Data</h2>
+	<form action="{{url_for('savee')}}" method="POST">
+		<table>
+			<tr><td>ID NOMER = </td><td><input type="number" name="id"></td></tr>
+			<tr><td>NAMA = </td><td><input type="text" name="nama"></td></tr>
+			<tr><td>TANGGAL = </td><td><input type="date" name="tanggal"></td></tr>
+			<tr><td>PENGHASILAN = </td><td><input type="number" name="hasil"></td></tr>
+			<tr><td>PENGELUARAN = </td><td><input type="number" name="keluar"></td></tr>
+			<tr><td><input type="submit" value="Kirim"></td></tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<h3><center>PENDAPATANMU HARI INI</center></h3>
+	<table border=5>
+		<thead>
+			<td>ID</td>
+			<td>NAMA</td>
+			<td>TANGGAL</td>
+			<td>HASIL</td>
+			<td>KELUAR</td>
+		</thead>
+		{% for row in rows %}
+			<tr>
+				<td>{{row["id"]}}</td>
+				<td>{{row["nama"]}}</td>
+				<td>{{row["tanggal"]}}</td>
+				<td>{{row["hasil"]}}</td>
+				<td>{{row["keluaran"]}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<br>
+	<a href="/">Home Page</a>
+</body>
+</html>

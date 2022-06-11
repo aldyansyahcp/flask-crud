@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flask Crud</title>
+</head>
+<body>
+	<h3><center>Flask Crud Sqlite3</center></h3>
+	<h3>Pendapatanmu</h3>
+	<table border=5>
+		<thead>
+			<td>ID</td>
+			<td>NAMA</td>
+			<td>TANGGAL</td>
+			<td>HASIL</td>
+			<td>PENGLUARAN</td>
+			<td>Bersihmu</td>
+		</thead>
+		{%for row in rows%}
+			<tr>
+					{% set bersih = row["hasil"] - row["keluaran"]%}
+				<td>{{row["id"]}}</td>
+				<td>{{row["nama"]}}</td>
+				<td>{{row["tanggal"]}}</td>
+				<td>{{row["hasil"]}}</td>
+				<td>{{row["keluaran"]}}</td>
+				<td>{{bersih}}</td>
+			</tr>
+		{%endfor%}
+	</table>
+	<br>
+	<p>Flask Crud Isian</p>
+	<ul>
+		<a href="/isibaru">Tambah Data</a>
+		<a href="/lihat">Lihat Data </a>
+		<a href="/hapusdata">Hapus data</a>
+	</ul>
+</body>
+</html>
