@@ -86,6 +86,6 @@ def editin():
             msg = "Gagal"
         return render_template("editrec.html", msg=msg)
         con.close()
-            
+"""
 if __name__ =="__main__":
-    app.run(debug=True)
+    app.run(debug=True)"""
